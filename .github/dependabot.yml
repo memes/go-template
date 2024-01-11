@@ -1,7 +1,9 @@
+# TODO: @memes - update to match requirements
+# spell-checker: disable
 ---
 version: 2
 updates:
-  - package-ecosystem: "bundler"
+  - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "weekly"
@@ -13,15 +15,13 @@ updates:
       interval: "weekly"
     reviewers:
       - memes
-  # TODO @memes - remove if not a go project
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
       interval: "weekly"
     reviewers:
       - memes
-  # TODO @memes - remove if repo doesn't contain Terraform
-  - package-ecosystem: "terraform"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"

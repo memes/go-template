@@ -1,4 +1,3 @@
-# TODO @memes remove is not a golang project
 # spell-checker: disable
 ---
 name: go-release
@@ -16,6 +15,8 @@ permissions:
 
 jobs:
   goreleaser:
+    # TODO: @memes - enable in real go project
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source

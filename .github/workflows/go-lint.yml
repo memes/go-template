@@ -1,4 +1,3 @@
-# TODO @memes remove is not a golang project
 # These github actions will perform linting and go tests
 # spell-checker: disable
 ---
@@ -16,7 +15,7 @@ permissions:
 
 jobs:
   go-mod-tidy:
-    # TODO @memes enable if this is a go project
+    # TODO: @memes - enable in real go project
     if: false
     runs-on: ubuntu-latest
     steps:
@@ -30,7 +29,7 @@ jobs:
       - name: Verify go.mod and go.sum are up to date
         run: go mod tidy && git diff --exit-code -- go.mod go.sum
   golangci-lint:
-    # TODO @memes enable if this is a go project
+    # TODO: @memes - enable in real go project
     if: false
     runs-on: ubuntu-latest
     steps:
@@ -46,7 +45,7 @@ jobs:
         with:
           version: latest
   go-test:
-    # TODO @memes enable if this is a go project
+    # TODO: @memes - enable in real go project
     if: false
     runs-on: ubuntu-latest
     steps:
