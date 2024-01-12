@@ -28,8 +28,8 @@ Go projects.
    1. In GitHub Settings:
       * _Settings_ > _Actions_ > _General_  > _Allow GitHub Actions to create and approve pull requests_ is checked
       * _Settings_ > _Secrets and Variables_ > _Actions_, and add `RELEASE_PLEASE_TOKEN` with PAT as a _Repository Secret_
-   2. Modify [release-please action](.github/workflows/release-please.yml) to be
-      a Go release
+   2. Modify [release-please action](.github/workflows/release-please.yml) to have the correct package and enable
    3. Remove [version.txt](version.txt)
-7. Remove all [CHANGELOG](CHANGELOG.md) entries.
-8. Commit changes.
+7. Review and enable [go-lint](.github/workflows/go-lint.yml) and [go-release](.github/workflows/go-release.yml) actions
+8. Remove all [CHANGELOG](CHANGELOG.md) entries.
+9. Commit changes.
