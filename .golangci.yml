@@ -15,6 +15,7 @@ linters:
     - dogsled
     - dupl
     - durationcheck
+    - err113
     - errcheck
     - errorlint
     - exportloopref
@@ -25,7 +26,6 @@ linters:
     - gocyclo
     - godot
     - godox
-    - goerr113
     - gofmt
     - gofumpt
     - goheader
