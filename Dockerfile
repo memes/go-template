@@ -3,7 +3,7 @@
 #  - expose ports in scratch container
 #  - add additional labels, if needed
 #  - add CMD as needed
-FROM alpine:3.20.1 as ca
+FROM alpine:3.20.2 as ca
 RUN apk --no-cache add ca-certificates-bundle=20240226-r0
 
 FROM scratch
