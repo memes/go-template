@@ -61,7 +61,7 @@ signs:
       - '--yes'
     output: true
 snapshot:
-  name_template: "{{ incpatch .Tag }}-next"
+  version_template: "{{ incpatch .Tag }}-next"
 changelog:
   disable: true
 dockers:
