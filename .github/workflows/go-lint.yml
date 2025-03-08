@@ -15,6 +15,8 @@ permissions:
 
 jobs:
   go-mod-tidy:
+    # TODO @memes - re-enable in go projects
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
@@ -27,6 +29,8 @@ jobs:
       - name: Verify go.mod and go.sum are up to date
         run: go mod tidy && git diff --exit-code -- go.mod go.sum
   golangci-lint:
+    # TODO @memes - re-enable in go projects
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
@@ -41,6 +45,8 @@ jobs:
         with:
           version: latest
   go-test:
+    # TODO @memes - re-enable in go projects
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
