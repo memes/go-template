@@ -1,0 +1,43 @@
+{
+    "name": "memes-go-template",
+    "image": "mcr.microsoft.com/devcontainers/go:1.24-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/memes/devcontainers-features/buf:1": {},
+        "ghcr.io/memes/devcontainers-features/direnv:1": {},
+        "ghcr.io/memes/devcontainers-features/google-cloud-cli:1": {},
+        "ghcr.io/memes/devcontainers-features/golangci-lint:1": {},
+        "ghcr.io/memes/devcontainers-features/goreleaser:1": {},
+        "ghcr.io/memes/devcontainers-features/hadolint:1": {},
+        "ghcr.io/memes/devcontainers-features/starship:1": {},
+        "ghcr.io/memes/devcontainers-features/talisman:1": {
+            "version": "1.37.0"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bufbuild.vscode-buf",
+                "DavidAnson.vscode-markdownlint",
+                "esbenp.prettier-vscode",
+                "Gruntfuggly.todo-tree",
+                "peterj.proto",
+                "redhat.vscode-yaml",
+                "streetsidesoftware.code-spell-checker",
+                "usernamehw.errorlens",
+                "ms-azuretools.vscode-containers"
+            ]
+        }
+    },
+    "onCreateCommand": {
+        "pre-commit": "sudo sh -c 'apt update && apt install -y --no-install-recommends pipx && rm -rf /var/lib/apt/lists/*' && pipx install pre-commit"
+    },
+    "postCreateCommand": {
+        "pre-commit": "pre-commit install --hook-type commit-msg --hook-type pre-commit"
+    },
+    "containerUser": "vscode",
+    "updateRemoteUserUID": true,
+    "mounts": [
+        "source=${localEnv:HOME}/.config/gcloud,target=/home/vscode/.config/gcloud,type=bind"
+    ]
+}
