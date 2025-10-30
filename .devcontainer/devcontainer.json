@@ -30,14 +30,14 @@
         }
     },
     "onCreateCommand": {
-        "pre-commit": "sudo sh -c 'apt update && apt install -y --no-install-recommends pipx && rm -rf /var/lib/apt/lists/*' && pipx install pre-commit"
+        "install-deps": "sudo sh -c 'apt update && apt install -y --no-install-recommends pipx && rm -rf /var/lib/apt/lists/*'"
     },
     "postCreateCommand": {
-        "pre-commit": "pre-commit install --hook-type commit-msg --hook-type pre-commit"
+        "pre-commit": "pipx install pre-commit && pre-commit install --hook-type commit-msg --hook-type pre-commit"
     },
     "containerUser": "vscode",
     "updateRemoteUserUID": true,
     "mounts": [
-        "source=${localEnv:HOME}/.config/gcloud,target=/home/vscode/.config/gcloud,type=bind"
+        "source=${localEnv:HOME}/.config/gcloud,target=/home/vscode/.config/gcloud,type=bind,consistency=cached"
     ]
 }
