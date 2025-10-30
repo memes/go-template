@@ -1,6 +1,6 @@
 {
     "name": "memes-go-template",
-    "image": "mcr.microsoft.com/devcontainers/go:1.24-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/go:1.25-bookworm",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/memes/devcontainers-features/buf:1": {},
@@ -10,9 +10,7 @@
         "ghcr.io/memes/devcontainers-features/goreleaser:1": {},
         "ghcr.io/memes/devcontainers-features/hadolint:1": {},
         "ghcr.io/memes/devcontainers-features/starship:1": {},
-        "ghcr.io/memes/devcontainers-features/talisman:1": {
-            "version": "1.37.0"
-        }
+        "ghcr.io/memes/devcontainers-features/talisman:1": {}
     },
     "customizations": {
         "vscode": {
