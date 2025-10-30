@@ -5,7 +5,7 @@
 #  - add additional labels, if needed
 #  - add CMD as needed
 FROM alpine:3.22.2 AS ca
-RUN apk --no-cache add ca-certificates-bundle=20250619-r0
+RUN apk --no-cache add ca-certificates-bundle=20250911-r0
 
 FROM scratch
 COPY --from=ca /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
