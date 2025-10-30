@@ -30,6 +30,8 @@
         "hte"
     ],
     "ignorePaths": [
-        ".devcontainers/devcontainers.json"
+        ".devcontainer/devcontainer.json",
+        ".gitignore",
+        ".pre-commit-config.yaml"
     ]
 }
