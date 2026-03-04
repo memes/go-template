@@ -18,6 +18,8 @@ avoid committing secrets.
 ([gofumpt] is the expected Go code formatter). Rules are defined in
 [.golangci.yml](.golangci.yml).
 
+> NOTE: The included devcontainer is already setup for use with this repo.
+
 1. Install [pre-commit] in a virtual python environment or globally: see
    [instructions](https://pre-commit.com/#installation)
 2. Install [golangci-lint] from a binary or from source: see
