@@ -4,8 +4,8 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/memes/go-template.svg)](https://pkg.go.dev/github.com/memes/go-template)
 [![Go Report Card](https://goreportcard.com/badge/github.com/memes/go-template)](https://goreportcard.com/report/github.com/memes/go-template)
 ![GitHub release](https://img.shields.io/github/v/release/memes/go-template?sort=semver)
-![Maintenance](https://img.shields.io/maintenance/yes/2025)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+![GitHub last commit](https://img.shields.io/github/last-commit/memes/go-template)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 This repository contains common settings and actions that I tend to use in my
 Go projects.
