@@ -10,5 +10,6 @@ RUN apk --no-cache add ca-certificates-bundle=20260413-r0
 FROM scratch
 COPY --from=ca /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 EXPOSE 8080
-COPY APP /APP
+ARG TARGETPLATFORM
+COPY $TARGETPLATFORMAPP /APP
 ENTRYPOINT ["/APP"]
