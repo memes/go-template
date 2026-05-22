@@ -1,11 +1,12 @@
 {
     "name": "memes-go-template",
-    "image": "mcr.microsoft.com/devcontainers/go:1.25-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/go:1.26-trixie",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:3": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:3": {
+            "moby": false
+        },
         "ghcr.io/memes/devcontainers-features/buf:1": {},
         "ghcr.io/memes/devcontainers-features/direnv:1": {},
-        "ghcr.io/memes/devcontainers-features/golangci-lint:1": {},
         "ghcr.io/memes/devcontainers-features/goreleaser:1": {},
         "ghcr.io/memes/devcontainers-features/hadolint:1": {},
         "ghcr.io/memes/devcontainers-features/starship:1": {},
