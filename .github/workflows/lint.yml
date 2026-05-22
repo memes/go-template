@@ -6,8 +6,17 @@ name: go-lint
 # yamllint disable-line rule:truthy
 on:
   pull_request:
+    paths:
+      - '**.go'
+      - go.mod
+      - go.sum
   push:
-    branches: [main]
+    branches:
+      - main
+    paths:
+      - '**.go'
+      - go.mod
+      - go.sum
 
 permissions:
   contents: read
@@ -15,46 +24,49 @@ permissions:
 
 jobs:
   go-mod-tidy:
-    # TODO @memes - re-enable in go projects
-    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Setup go
         uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
           cache: true
+          cache-dependency-path: go.sum
       - name: Verify go.mod and go.sum are up to date
         run: go mod tidy && git diff --exit-code -- go.mod go.sum
   golangci-lint:
-    # TODO @memes - re-enable in go projects
-    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Setup go
         uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
           cache: true
+          cache-dependency-path: go.sum
       - name: Execute linter
         uses: golangci/golangci-lint-action@v9.2.0
         with:
           version: latest
   go-test:
-    # TODO @memes - re-enable in go projects
-    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Setup go
         uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
           cache: true
+          cache-dependency-path: go.sum
       - name: Run go tests
         run: go test -v ./...

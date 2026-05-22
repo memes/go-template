@@ -1,4 +1,5 @@
 # Ignore my direnv setup
+.env
 .envrc
 .direnv
 .tool-versions

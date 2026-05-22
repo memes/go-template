@@ -13,4 +13,4 @@ fileignoreconfig:
   ignore_detectors:
   - filecontent
 - filename: .devcontainer/devcontainer-lock.json
-  checksum: d1b05efc05c375842888811ab89e04270ec13e254f183d4dc45ecae0b267b8ed
+  checksum: 6f662776072f38bff98799a5dd5b15103f2e11f18a0f694247fd384c905de1e4

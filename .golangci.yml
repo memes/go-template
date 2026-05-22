@@ -81,7 +81,7 @@ linters:
     - whitespace
     - wrapcheck
   settings:
-    # TODO @memes - update the list of allowed imports
+    # TODO(@memes): Update the list of allowed imports
     depguard:
       rules:
         main:

@@ -19,6 +19,8 @@
         "markdownlint",
         "opencontainers",
         "pastebin",
+        "sigstore",
+        "syft",
         "thumbsup",
         "trimpath",
         "trixie",

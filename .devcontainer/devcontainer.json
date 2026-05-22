@@ -5,11 +5,13 @@
         "ghcr.io/devcontainers/features/docker-in-docker:3": {
             "moby": false
         },
+        "ghcr.io/devcontainers-extra/features/cosign:1": {},
+        "ghcr.io/devcontainers-extra/features/direnv:1": {},
+        "ghcr.io/devcontainers-extra/features/starship:1": {},
+        "ghcr.io/devcontainers-extra/features/syft:1": {},
         "ghcr.io/memes/devcontainers-features/buf:1": {},
-        "ghcr.io/memes/devcontainers-features/direnv:1": {},
         "ghcr.io/memes/devcontainers-features/goreleaser:1": {},
         "ghcr.io/memes/devcontainers-features/hadolint:1": {},
-        "ghcr.io/memes/devcontainers-features/starship:1": {},
         "ghcr.io/memes/devcontainers-features/talisman:1": {}
     },
     "customizations": {
