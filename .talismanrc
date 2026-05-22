@@ -1,6 +1,7 @@
 # spell-checker: disable
 # yamllint disable rule:line-length
 ---
+version: "1.0"
 fileignoreconfig:
 - filename: .github/workflows/release.yml
   checksum: a975e764f9205155fb006fef6de943574e3d61a314f9215599590a0242ad2efc
@@ -11,4 +12,5 @@ fileignoreconfig:
 - filename: README.md
   ignore_detectors:
   - filecontent
-version: "1.0"
+- filename: .devcontainer/devcontainer-lock.json
+  checksum: d1b05efc05c375842888811ab89e04270ec13e254f183d4dc45ecae0b267b8ed
