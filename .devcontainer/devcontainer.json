@@ -2,7 +2,7 @@
     "name": "memes-go-template",
     "image": "mcr.microsoft.com/devcontainers/go:1.26-trixie",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:3": {
+        "ghcr.io/devcontainers/features/docker-in-docker:": {
             "moby": false
         },
         "ghcr.io/devcontainers-extra/features/cosign:1": {},
