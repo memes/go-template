@@ -59,10 +59,10 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/attest@v4.1.1
+      - uses: actions/attest@v4.2.2
         with:
           subject-checksums: ./dist/checksums.txt
-      - uses: actions/attest@v4.1.1
+      - uses: actions/attest@v4.2.2
         with:
           subject-checksums: ./dist/digests.txt
       - name: Trigger Go Report update
